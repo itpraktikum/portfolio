@@ -20,7 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 11;
     position: fixed;
 }
 
@@ -94,6 +94,13 @@ body{
     color: #fff;
 }
 
+.header .bars{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
 /* The started responsive */
 
 @media only screen and (max-width: 1240px) {
@@ -118,6 +125,81 @@ body{
     }
     .header .nav-link .btn{
         font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header .nav-link{
+        transition: .4s ease;
+        width: 70%;
+        height: 100vh;
+        background-color: #f9f9f9;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 300px 0;
+    }
+    .header .bars{
+        display: block;
+    }
+}
+
+/* The started contact */
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.616);
+    position: fixed;
+    z-index: 10;
+}
+
+.contact .box-cont{
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+}
+
+.box-cont .open-cont{
+    position: absolute;
+    cursor: pointer;
+    right: -100px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.box-cont .cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+.cont img{
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .box-cont .open-cont{
+        top: -100px;
+        right: 0;
     }
 }
 
@@ -541,4 +623,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f5f4f4;
+}
+
+.footer img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
